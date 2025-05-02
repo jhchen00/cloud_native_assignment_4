@@ -15,3 +15,6 @@ docker run -p 3000:3000 simple_calculator
 ```shell
 http://localhost:3000
 ```
+
+## GitHub Action Workflow
+When there is a pull request to the main branch, GitHub Actions will be triggered to build a Docker image and push it to the Docker Hub. The image tag is the short commit SHA.
