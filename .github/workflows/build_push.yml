@@ -32,6 +32,11 @@ jobs:
           tags: | # Define how to generate tags
             type=sha,format=short # Generate a tag based on the short commit SHA
 
+      - name: Log generated Docker tags
+        run: |
+          echo "Generated Docker tags: ${{ steps.meta.outputs.tags }}"
+          echo "Image will be pushed to: jhchen000/2025cloud with tags: ${{ steps.meta.outputs.tags }}"
+
       - name: Build and push Docker image # Step 5: Build and push Docker image
         uses: docker/build-push-action@v6 # Use the official action to build and push the Docker image
         with:
