@@ -1,7 +1,5 @@
 FROM python:3.13-slim
 
-BREAK_THE_DOCKERFILE
-
 WORKDIR /app
 
 COPY requirements.txt .
